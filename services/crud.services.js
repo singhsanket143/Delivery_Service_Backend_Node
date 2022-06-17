@@ -7,6 +7,15 @@ const create = async (model, data) => {
     }
 }
 
+const bulkCreate = async (model, data) => {
+    try {
+        const response = await model.bulkCreate(data);
+        return response;
+    } catch (error) {
+        console.log(error);
+    }
+}
+
 const getAll = async (model) => {
     try {
         const response = await model.findAll();
@@ -50,5 +59,6 @@ module.exports = {
     getAll,
     getById,
     destroy,
-    update
+    update,
+    bulkCreate
 }
