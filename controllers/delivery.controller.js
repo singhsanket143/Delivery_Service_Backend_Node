@@ -6,7 +6,20 @@ const serverError = {
     success: false,
     data: {}
 }
-
+`
+{
+    "senderId": 1,
+    "receiverId": 2,
+    "items": [
+        {
+            "name": "TV", "description": "new tv"
+        }, 
+        {
+            "name": "pencil", "description": "new pencil"
+        }
+    ]
+}
+`
 const createDelivery = async (req, res) => {
     const response = await crud.create(Courier_Delivery, req.body);
     // [{name: 'abc', description: 'abcd'}, {name: 'sdkbkfv'}]
