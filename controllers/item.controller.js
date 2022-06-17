@@ -35,7 +35,7 @@ const getAllItems = async (req, res) => {
 
 
 const getItem = async (req, res) => {
-    const response = await crud.getAll(Item, req.params.id);
+    const response = await crud.getById(Item, req.params.id);
     if(!response) {
         return res.status(500).json(serverError);
     }
