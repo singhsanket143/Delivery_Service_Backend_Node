@@ -1,11 +1,12 @@
 const itemController = require('../controllers/item.controller');
 const authValidator = require('../middlewares/auth.validator');
-
+const itemValidator = require('../middlewares/item.validator');
 
 const routes = (app) => {
     app.post(
         '/relevel/api/v1/item',
         authValidator.isAuthenticated,
+        itemValidator.createItemValidator,
         itemController.createItem
     )
     app.get(
