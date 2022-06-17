@@ -24,7 +24,8 @@ module.exports = (sequelize, DataTypes) => {
     description: DataTypes.STRING,
     weight: DataTypes.INTEGER,
     dimensions: DataTypes.STRING,
-    isFragile: DataTypes.BOOLEAN
+    isFragile: DataTypes.BOOLEAN,
+    cost: DataTypes.INTEGER
   }, {
     sequelize,
     modelName: 'Item',
